@@ -1,6 +1,6 @@
 import unittest
 
-import utils
+from url_check import utils
 
 class TestGetHostAndPort(unittest.TestCase):
     def test_valid_case(self):
