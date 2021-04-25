@@ -1,5 +1,6 @@
 from flask import Flask, make_response
 
+
 def create_app():
     app = Flask(__name__)
 
