@@ -1,8 +1,5 @@
-To run from the command line, do the following from the project root:
+Setup the environment as described in [SETUP instructions](SETUP.md).  After that, do the following
 ```
-$ python -m venv venv
-$ . venv/bin/activate
-$ pip install flask
 $ export FLASK_APP=url_check.py
 $ export FLASK_ENV=development  # for debugging
 $ flask init-db
