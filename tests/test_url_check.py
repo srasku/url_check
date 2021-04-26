@@ -9,6 +9,7 @@ def test_url_check(client):
     """
     url_check_tester(client, 'urlinfo/1/localhost:99', 204)
     url_check_tester(client, 'urlinfo/1/bad-host.com:8899', 403)
+    url_check_tester(client, 'urlinfo/1/a-bad-host-on-default-http-port.com', 403)
     url_check_tester(
         client,
         'urlinfo/1/grey-host.com:8231/free-mony.html',

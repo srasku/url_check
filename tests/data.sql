@@ -1,6 +1,7 @@
 INSERT INTO bad_url (host, port)
 VALUES
-    ('bad-host.com', 8899);
+    ('bad-host.com', 8899),
+    ('a-bad-host-on-default-http-port.com', 80);
 
 INSERT INTO bad_url (host, port, path)
 VALUES
