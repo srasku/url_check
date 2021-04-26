@@ -15,9 +15,24 @@ def test_url_check(client):
         403)
     url_check_tester(
         client,
+        'urlinfo/1/grey-host.com:8231/a/path/with/several/levels.html',
+        403)
+    url_check_tester(
+        client,
         'urlinfo/1/grey-host.com:8232/free-mony.html',
         204)
-    url_check_tester(client, 'urlinfo/1/grey-host.com/free-mony.html', 204)
+    url_check_tester(
+        client,
+        'urlinfo/1/grey-host.com:8232/a/path/with/several/levels.html',
+        204)
+    url_check_tester(
+        client,
+        'urlinfo/1/grey-host.com:8232/free-mony.html',
+        204)
+    url_check_tester(
+        client,
+        'urlinfo/1/grey-host.com/a/path/with/several/levels.html',
+        204)
 
 
 def url_check_tester(client, url, status_code):

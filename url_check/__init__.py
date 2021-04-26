@@ -31,7 +31,7 @@ def create_app():
             path is NULL """,
             {'host': host, 'port': port})
 
-    @app.route('/urlinfo/1/<host_and_port>/<path>')
+    @app.route('/urlinfo/1/<host_and_port>/<path:path>')
     def url_check_with_path(
             host_and_port, path):  # pylint: disable=unused-argument
         host, port = utils.get_host_and_port(host_and_port)
