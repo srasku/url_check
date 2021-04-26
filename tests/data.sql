@@ -1,6 +1,6 @@
 INSERT INTO bad_url (host, port)
 VALUES
-    ('bad-host.com', 8899); -- All URLs are banned for this host
+    ('bad-host.com', 8899);
 
 INSERT INTO bad_url (host, port, path)
 VALUES
