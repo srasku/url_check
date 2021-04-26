@@ -21,3 +21,12 @@ def client(app):  # pylint: disable=redefined-outer-name
     Fixture to create client for tests
     """
     return app.test_client()
+
+
+@pytest.fixture
+def runner(app):  # pylint: disable=redefined-outer-name
+    """
+    Test runner for the app's Click commands.
+    This allows us to run the `init-db` command from tests.
+    """
+    return app.test_cli_runner()
