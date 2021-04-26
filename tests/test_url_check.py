@@ -13,8 +13,11 @@ def test_url_check(client):
         client,
         'urlinfo/1/grey-host.com:8231/free-mony.html',
         403)
-    url_check_tester(client, 'urlinfo/1/grey-host:8232/free-mony.html', 204)
-    url_check_tester(client, 'urlinfo/1/grey-hostfree-mony.html', 204)
+    url_check_tester(
+        client,
+        'urlinfo/1/grey-host.com:8232/free-mony.html',
+        204)
+    url_check_tester(client, 'urlinfo/1/grey-host.com/free-mony.html', 204)
 
 
 def url_check_tester(client, url, status_code):
